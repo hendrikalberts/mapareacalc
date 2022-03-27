@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "mapareacalc",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-mapareacalc-staging-195602-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/a36a11d962f54b4b51658f8389e4bc334be17f7b"
+}

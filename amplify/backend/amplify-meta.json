@@ -1,0 +1,108 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mapareacalc-staging-195602-authRole",
+      "UnauthRoleArn": "arn:aws:iam::314612077827:role/amplify-mapareacalc-staging-195602-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::314612077827:role/amplify-mapareacalc-staging-195602-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mapareacalc-staging-195602-deployment",
+      "UnauthRoleName": "amplify-mapareacalc-staging-195602-unauthRole",
+      "StackName": "amplify-mapareacalc-staging-195602",
+      "StackId": "arn:aws:cloudformation:us-east-1:314612077827:stack/amplify-mapareacalc-staging-195602/9e62cc50-9e50-11ec-9356-0aae5937b311",
+      "AmplifyAppId": "dorvnliskvejp"
+    }
+  },
+  "auth": {
+    "mapareacalc": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_XEZ0cbjXC",
+        "AppClientIDWeb": "3sag76he4mnb90iqarj5o5il64",
+        "AppClientID": "3ef6d915kncb31240jk5mmc1gf",
+        "IdentityPoolId": "us-east-1:f06acd64-06b6-4b75-a5b7-96044fe4ccfe",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:314612077827:userpool/us-east-1_XEZ0cbjXC",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "mapareacalc"
+      },
+      "lastPushTimeStamp": "2022-03-26T20:08:31.202Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mapareacalc-staging-195602-deployment/amplify-cfn-templates/auth/mapareacalc-cloudformation-template.json",
+        "logicalId": "authmapareacalc"
+      }
+    }
+  },
+  "api": {
+    "mapareacalc": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "77gjnfmfarfk3kd6uywfliu6ri",
+        "GraphQLAPIEndpointOutput": "https://x6o6mhqatfeibaq4cydcr3dmnm.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-d4nyy6kavvfyjoigjrlscbwpiq"
+      },
+      "lastPushTimeStamp": "2022-03-26T20:08:31.206Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mapareacalc-staging-195602-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apimapareacalc"
+      },
+      "lastPushDirHash": "zlJWhtYpZDlL6ETR+3nd7iDsA28="
+    }
+  },
+  "geo": {
+    "map4f031982": {
+      "isDefault": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Map",
+      "mapStyle": "VectorEsriStreets",
+      "accessType": "AuthorizedUsers",
+      "output": {
+        "Style": "VectorEsriStreets",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:geo:us-east-1:314612077827:map/map4f031982-staging",
+        "Name": "map4f031982-staging"
+      },
+      "lastPushTimeStamp": "2022-03-26T20:08:31.209Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mapareacalc-staging-195602-deployment/amplify-cfn-templates/geo/map4f031982-cloudformation-template.json",
+        "logicalId": "geomap4f031982"
+      }
+    }
+  }
+}
